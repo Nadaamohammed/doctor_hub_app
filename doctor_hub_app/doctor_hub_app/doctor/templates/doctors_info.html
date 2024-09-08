@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ doctor.name }}</h1>
+<p>Phone: {{ doctor.phone }}</p>
+<p>Address: {{ doctor.address }}</p>
+<p>Specialization: {{ doctor.specialization.name }}</p>
+<p>Area: {{ doctor.area.name }}</p>
+{% endblock %}

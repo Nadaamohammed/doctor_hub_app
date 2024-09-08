@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Welcome, {{ user.username }}, to Doctors Hub</h1>
+<form action="{% url 'search' %}" method="get">
+    <select name="specialization">
+        {% for specialization in specializations %}
+        <option value="{{ specialization.name }}">{{ specialization.name }}</option>
+        {% endfor %}
+    </select>
+    <select name="area">
+        {% for area in areas %}
+        <option value="{{ area.name }}">{{ area.name }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <br>
+    <button type="submit">Search</button>
+</form>
+{% endblock %}
